@@ -1,0 +1,31 @@
+{
+  "button": {
+    "id": "button",
+    "prefer": "native HTML <button>",
+    "must": [
+      "Use <button> or <input type=submit>, not a clickable div",
+      "Visible accessible name (text content or aria-label)",
+      "Do not set tabindex greater than 0"
+    ],
+    "keyboard": {
+      "Enter": "Activate",
+      "Space": "Activate"
+    },
+    "source": "https://www.w3.org/TR/using-aria/#rule1"
+  },
+  "dialog": {
+    "id": "dialog",
+    "prefer": "native <dialog> or a kit Dialog (e.g. React Aria)",
+    "must": [
+      "role=dialog only if not using <dialog>",
+      "aria-modal=true for modal dialogs",
+      "Accessible name via aria-labelledby or aria-label",
+      "Focus moves in, Escape closes, focus restores"
+    ],
+    "keyboard": {
+      "Tab": "Cycle focus inside",
+      "Escape": "Close and restore focus"
+    },
+    "source": "https://www.w3.org/WAI/ARIA/apg/patterns/dialog-modal/"
+  }
+}
